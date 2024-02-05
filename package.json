@@ -11,7 +11,8 @@
     "cypress:run": "cypress run",
     "preview": "vite preview",
     "test": "npx vitest run",
-    "prepare": "husky"
+    "prepare": "husky",
+    "check:types": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^18.2.0",
