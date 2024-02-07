@@ -1,0 +1,8 @@
+.container {
+  width: min(1160px, 100% - 4.9rem);
+  margin-inline: auto;
+
+  @media screen and (width >= 48rem) {
+    width: min(1160px, 100% - 13rem);
+  }
+}

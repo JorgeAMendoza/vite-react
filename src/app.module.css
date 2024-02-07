@@ -1,0 +1,190 @@
+.app {
+  padding: 2rem 0;
+}
+
+.introduction {
+  & h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-block-end: 2rem;
+    text-decoration: underline var(--primary);
+    text-underline-offset: 0.25em;
+    color: var(--light-text);
+  }
+
+  @media screen and (width >= 48rem) {
+    & h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+.techList {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-block-end: 3rem;
+
+  & li img {
+    width: 6rem;
+  }
+
+  @media screen and (width >= 48rem) {
+    & {
+      gap: 2rem;
+    }
+
+    & li img {
+      width: 8rem;
+    }
+  }
+}
+
+.info {
+  font-size: 1.6rem;
+  color: var(--light-text);
+  text-align: center;
+  width: min(100%, 50rem);
+  margin-inline: auto;
+
+  & strong,
+  & code {
+    color: var(--primary);
+  }
+
+  @media screen and (width >= 48rem) {
+    & {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.petGoodBoy {
+  margin-block-start: 3rem;
+
+  & h2 {
+    font-size: 2.4rem;
+    color: var(--light-text);
+    text-align: center;
+    text-decoration: underline var(--primary);
+    text-underline-offset: 0.25em;
+    text-transform: capitalize;
+  }
+
+  @media screen and (width >= 48rem) {
+    & {
+      margin-block-start: 5rem;
+    }
+
+    & h2 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.boopCounter {
+  margin-block-start: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  & button {
+    min-width: 13ch;
+    padding: 0.8em 0;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 3px;
+    color: var(--primary);
+    cursor: pointer;
+  }
+
+  & button:hover {
+    background-color: var(--primary);
+    color: var(--light-text);
+  }
+
+  p {
+    color: var(--light-text);
+    text-decoration: underline var(--primary);
+    text-underline-offset: 0.25em;
+  }
+
+  @media screen and (width >= 48rem) {
+    & {
+      gap: 3rem;
+      margin-block-start: 2rem;
+      font-size: 1.8rem;
+    }
+
+    & button {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.boopers {
+  position: relative;
+  margin-block-start: 3rem;
+}
+
+.blaze {
+  width: 25rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  border: 5px solid var(--primary);
+  margin-inline: auto;
+
+  @media screen and (width >= 48rem) {
+    & {
+      width: 25rem;
+    }
+  }
+}
+
+@keyframes boop {
+  0% {
+    transform: translate(-50%, 50%);
+    opacity: 0.2;
+  }
+
+  25% {
+    transform: translate(0, 90%);
+    opacity: 0.8;
+  }
+
+  30%,
+  40% {
+    transform: translate(0, 90%) rotate(20deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(0, 90%) rotate(-20deg);
+  }
+
+  70% {
+    transform: translate(0, 90%) rotate(20deg);
+  }
+
+  85% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, 50%);
+    opacity: 0;
+  }
+}
+
+.hand {
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  opacity: 0;
+
+  &[data-boop='true'] {
+    animation: boop 2s ease-in-out;
+  }
+}
