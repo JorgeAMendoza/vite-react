@@ -1,34 +1,70 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import blazeImage from './assets/blaze.jpg?w=300&h=300&format=webp&imagetools'
+import handIcon from './assets/hand.svg'
+import utilStyle from '@/styles/utils/container.module.css'
+import style from './app.module.css'
+const techIcons = ['react-icon.svg', 'typescript-icon.svg', 'vite-icon.svg']
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [boops, setBoops] = useState(0)
+  const [playAnimation, setPlayAnimation] = useState(false)
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((currentCount) => currentCount + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main className={style.app}>
+      <section aria-label="starter introduction" className={style.introduction}>
+        <div className={utilStyle.container}>
+          <div>
+            <h1>Vite + React + TypeScript</h1>
+            <ul className={style.techList}>
+              {techIcons.map((icon) => (
+                <li>
+                  {' '}
+                  <img src={`/icons/${icon}`} alt="" />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <p className={style.info}>
+            Welcome to my <strong>Vite + React + TypeScript</strong> template
+            setup. Please check out the <code>README.md</code> for more
+            information on the configuration
+          </p>
+        </div>
+      </section>
+
+      <section
+        aria-label="interactive dog petting"
+        className={style.petGoodBoy}
+      >
+        <div className={utilStyle.container}>
+          <h2>Give the good boy some boops</h2>
+
+          <div className={style.boopCounter}>
+            <button
+              onClick={() => {
+                if (playAnimation) return
+                setBoops((b) => b + 1)
+                setPlayAnimation(true)
+              }}
+            >
+              Boop
+            </button>
+            <p>Boops: {boops}</p>
+          </div>
+
+          <div className={style.boopers}>
+            <img
+              src={handIcon}
+              alt=""
+              className={style.hand}
+              data-boop={playAnimation}
+              onAnimationEnd={() => setPlayAnimation(false)}
+            />
+            <img src={blazeImage} alt="Very good dog" className={style.blaze} />
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }
 
