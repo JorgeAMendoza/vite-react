@@ -11,6 +11,12 @@
     text-underline-offset: 0.25em;
     color: var(--light-text);
   }
+
+  @media screen and (width >= 48rem) {
+    & h1 {
+      font-size: 4rem;
+    }
+  }
 }
 
 .techList {
@@ -22,15 +28,34 @@
   & li img {
     width: 6rem;
   }
+
+  @media screen and (width >= 48rem) {
+    & {
+      gap: 2rem;
+    }
+
+    & li img {
+      width: 8rem;
+    }
+  }
 }
 
 .info {
   font-size: 1.6rem;
   color: var(--light-text);
+  text-align: center;
+  width: min(100%, 50rem);
+  margin-inline: auto;
 
   & strong,
   & code {
     color: var(--primary);
+  }
+
+  @media screen and (width >= 48rem) {
+    & {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -44,6 +69,16 @@
     text-decoration: underline var(--primary);
     text-underline-offset: 0.25em;
     text-transform: capitalize;
+  }
+
+  @media screen and (width >= 48rem) {
+    & {
+      margin-block-start: 5rem;
+    }
+
+    & h2 {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -74,6 +109,18 @@
     text-decoration: underline var(--primary);
     text-underline-offset: 0.25em;
   }
+
+  @media screen and (width >= 48rem) {
+    & {
+      gap: 3rem;
+      margin-block-start: 2rem;
+      font-size: 1.8rem;
+    }
+
+    & button {
+      font-size: 1.8rem;
+    }
+  }
 }
 
 .boopers {
@@ -87,6 +134,12 @@
   border-radius: 100%;
   border: 5px solid var(--primary);
   margin-inline: auto;
+
+  @media screen and (width >= 48rem) {
+    & {
+      width: 25rem;
+    }
+  }
 }
 
 @keyframes boop {
