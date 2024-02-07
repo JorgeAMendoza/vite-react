@@ -10,6 +10,8 @@ module.exports = {
     'plugin:cypress/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
