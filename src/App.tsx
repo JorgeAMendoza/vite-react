@@ -16,7 +16,7 @@ function App() {
             <h1>Vite + React + TypeScript</h1>
             <ul className={style.techList}>
               {techIcons.map((icon) => (
-                <li>
+                <li key={icon}>
                   {' '}
                   <img src={`/icons/${icon}`} alt="" />
                 </li>
@@ -37,7 +37,10 @@ function App() {
         className={style.petGoodBoy}
       >
         <div className={utilStyle.container}>
-          <h2>Give the good boy some boops</h2>
+          <h2>
+            Give the good boy <br />
+            some boops
+          </h2>
 
           <div className={style.boopCounter}>
             <button
@@ -46,6 +49,7 @@ function App() {
                 setBoops((b) => b + 1)
                 setPlayAnimation(true)
               }}
+              disabled={playAnimation}
             >
               Boop
             </button>
