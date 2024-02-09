@@ -194,6 +194,7 @@ A simple `pre-commit` is implemented and executes the following:
 
 The process is relatively fast, but the more files and test we add will make this process longer. However, the lint-staged configuration file provices the `--cache` option for some of the options to ensure we are only running the check on files that were modified.
 
-This configuration doesn't cache our test, so every Vitest test will run on a commit, I plan to research ways to implement this feature. 
+This configuration doesn't cache our test, so every Vitest test will run on a commit, I plan to research ways to implement this feature.
+test the commit.
 
 ### Stylelint
