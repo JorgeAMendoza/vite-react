@@ -1,2 +1,2 @@
-npm test --changed
+npm run test:changed
 npx lint-staged

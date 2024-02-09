@@ -11,6 +11,7 @@
     "cypress:run": "cypress run",
     "preview": "vite preview",
     "test": "npx vitest run",
+    "test:changed": "npx vitest run --changed",
     "prepare": "husky",
     "check:types": "tsc --noEmit"
   },
