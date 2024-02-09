@@ -16,6 +16,9 @@ This `README` will cover the tools use and general purpose of each one and why I
   - [Vite && Vitest](#vite--vitest)
   - [Linting + Husky](#linting--husky)
   - [Stylelint](#stylelint)
+- [Other Tools](#other-tools)
+  - [PostCSS](#postcss)
+- [Conclusion](#conclusion)
 
 ## Techstack
 
