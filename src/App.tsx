@@ -27,7 +27,7 @@ function App() {
           <p className={style.info}>
             Welcome to my <strong>Vite + React + TypeScript</strong> template
             setup. Please check out the <code>README.md</code> for more
-            information on the configuration
+            information on the configuration!!
           </p>
         </div>
       </section>
